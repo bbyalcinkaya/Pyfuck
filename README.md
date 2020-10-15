@@ -1,7 +1,7 @@
 # Pyfuck
 A modern dialect of the best programming language ever.
 
-[Hello, World!](examples/hello.py)
+[Hello, World!](example/hello.py)
 ## Syntax
 Pyfuck | Brainfuck
 -------|----------
