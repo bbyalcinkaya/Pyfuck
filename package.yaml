@@ -1,0 +1,44 @@
+name:                pyfuck
+version:             0.1.0.0
+github:              "bbyalcinkaya/pyfuck"
+license:             BSD3
+author:              "Burak Bilge Yalcinkaya"
+maintainer:          "example@example.com"
+copyright:           "2020 Burak Bilge Yalcinkaya"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+description:         Please see the README on GitHub at <https://github.com/githubuser/pyfuck#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- mtl
+- parsec
+- indents
+- transformers
+library:
+  source-dirs: src
+
+executables:
+  pyfuck:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - pyfuck
+
+tests:
+  pyfuck-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - pyfuck
